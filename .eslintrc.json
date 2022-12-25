@@ -1,0 +1,77 @@
+{
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": ["next","eslint:recommended","airbnb","plugin:react/recommended"],
+    "ignorePatterns": ["**/TRACK-WASM.*","*.js","*.jsx"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": false
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "@typescript-eslint"
+    ],
+    "settings":{
+      "react":{
+        "version": "detect"
+      }
+    },
+    "rules": {
+      "no-shadow": "off",
+      "@typescript-eslint/no-shadow": "error",
+      "react/react-in-jsx-scope": "off",
+      "import/extensions": ["error","never"],
+      "linebreak-style": "off",
+      "semi": ["error","always"],
+      "indent": ["error",4],
+      "max-len": ["error",300],
+      "eol-last": ["error","never"],
+      "no-use-before-define": "off",
+      "react/jsx-props-no-spreading": "off",
+      "nonblock-statement-body-position": ["error","below"],
+      "brace-style": ["error","allman"],
+      "react/jsx-filename-extension": "off",
+      "react/jsx-indent": "off",
+      "react/jsx-indent-props": "off",
+      "react-hooks/exhaustive-deps": "off",
+      "jsx-a11y/anchor-is-valid": [ "error", {
+        "components": [ "Link" ],
+        "specialLink": [ "hrefLeft", "hrefRight" ],
+        "aspects": [ "invalidHref", "preferButton" ]
+      }],
+      "jsx-a11y/media-has-caption": "off",
+      "comma-dangle": ["error", "never"],
+      "import/prefer-default-export": "off",
+      "import/order": ["error", {"groups": ["index", "sibling", "parent", "internal", "external", "builtin", "object", "type"]}],
+      "object-curly-newline": ["error",
+        {
+          "ImportDeclaration": "never",
+          "ExportDeclaration": "never",
+          "ObjectExpression":{
+            "multiline": true
+          },
+          "ObjectPattern": {
+            "multiline": true
+          }
+        }],
+      "curly": ["error","multi-or-nest"],
+      "no-console": ["error",{ "allow":  ["warn", "error"]}],
+      "no-undef": "off",
+      "no-alert": "off",
+      "react/no-array-index-key": "off",
+      "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+      "function-paren-newline": ["error","multiline"],
+      "function-call-argument-newline": "off",
+      "react/function-component-definition":[0]
+    },
+    "globals": {
+      "React": "writable"
+    }
+  }
+  
